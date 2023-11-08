@@ -2,9 +2,7 @@
 
 Run:
 ```
-adb devices
-npx react-native start
-npx react-native run-android
+npx expo start
 ```
 
 Build:
