@@ -1,28 +1,16 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 
-const Stack = createStackNavigator();
-
-
-
-export default function App({ navigation }) {
-    return (
-      <View style={styles.container}>
-        <Entypo name="home" size={68} color="black" />
-        <Text style={[styles.text, styles.whiteText, styles.largeText]}>Black</Text>
-        <Text style={[styles.text, styles.smallText]}>Green</Text>
-        <View style={{ height: 30 }}></View>
-        <Text style={[styles.text, styles.mediumText]}>Purple</Text>
-        <Text style={[styles.text, styles.whiteText, styles.largeText]}>Blue</Text>
-        <Button title="Go to App" onPress={() => navigation.navigate('App')} />
-        <StatusBar style="auto" />
-      </View>
-    );
-  }
-
+function ColorsScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Entypo name="home" size={68} color="white" />
+      <Text style={[styles.text, styles.whiteText, styles.largeText]}>Spring</Text>
+      <Button title="Go to App" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -31,18 +19,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  smallText:  {
-    fontSize: 20,
-  },
-  mediumText: {
-    fontSize: 24,
-  },
   largeText: {
     fontSize: 34,
-
-  },
-  whiteText: {
     color: '#FFFFFF',
   },
-  
 });
+
+export default ColorsScreen;
